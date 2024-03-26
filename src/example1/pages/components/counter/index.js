@@ -2,6 +2,7 @@ import counterModel from '../../../dataArea/home/models/counter'
 import counterApplication from '../../../dataArea/home/application/counter'
 import {Button } from '@alifd/next'
 
+// 不依赖同层级的组件
 function Counter() {
   counterApplication.init()
 
