@@ -8,6 +8,9 @@ const counterApplication = {
     counterModel.setState({
       count
     })
+  },
+  addCount: () => {
+    counterServer.addCount()
   }
 }
 
