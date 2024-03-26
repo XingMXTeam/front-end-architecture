@@ -1,13 +1,14 @@
-import counterMode, { DEFAULT_MODEL } from '../models/counter'
+import counterModel, { DEFAULT_MODEL } from '../models/counter'
 
+// 领域服务： 操作不同数据实体/模型具体逻辑，抽象可复用
 const counterServer = {
   setCount: (count) => {
-    counterMode.setState({
+    counterModel.setState({
       count
     })
   },
   addCount: () => {
-    counterMode.setState(s => ({
+    counterModel.setState(s => ({
       count: s.count+1
     }))
   },
@@ -19,7 +20,7 @@ const counterServer = {
     })
   },
   reset: () => {
-    counterMode.setState(DEFAULT_MODEL)
+    counterModel.setState(DEFAULT_MODEL)
   }
 }
 
